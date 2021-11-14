@@ -1,24 +1,3 @@
-/**
- * TOGGLE MENU
- */
-// function toggleNavbar(){
-//     let navbar = document.getElementById('navbar');
-    
-//     if(window.getComputedStyle(navbar).getPropertyValue('display') == 'none'){
-//         navbar.style.display = 'block';
-//     }
-//     else{
-//         navbar.style.display = 'none';
-//     }
-// }
-if(window.innerWidth <= '759px'){
-    document.getElementById('navbar').classList.add('collapse')
-}
-else{
-    document.getElementById('navbar').className = 'navbar';
-}
-
-
 
 
 /**
@@ -32,3 +11,20 @@ else{
          document.getElementById('intro_video').className='';
      }
  }
+
+
+
+ 
+/**
+ * ONTOP BUTTON
+ */
+// if(window.pageYOffset < '300px'){
+//     document.getElementById('onTopButton').style.display = 'none';
+// }
+// else{
+//     document.getElementById('onTopButton').style.display = 'block';
+// }
+function onTop() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}

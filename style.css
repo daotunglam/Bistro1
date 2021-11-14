@@ -1,3 +1,9 @@
+/****** GOOGLE FONT (start) ******/
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+/****** GOOGLE FONT (end) ******/
+
+
+
 body{
     margin: 0;
     padding: 0;
@@ -22,18 +28,24 @@ header .navbar{
     z-index: 1;
 }
 
-.navbar-brand{
-    font-weight: bold;
+.logo{
+    width: 4rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo img{
+    width: 100%;
 }
 
-header .offcanvas{
+.offcanvas{
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-nav a{
+.nav-link{
     color: white !important;
 }
-
 
 
 
@@ -73,10 +85,9 @@ nav a{
 /****** MAIN (start) ******/
 main{
     position: relative;
-    z-index: 1;
-    margin-top: 30vw;
+    margin-top: 3vw;
     background-color: white;
-    box-shadow: 0px -20px 10px 10px white;;
+    box-shadow: 0px -20px 10px -10px white;
 }
 
 .hide_video {
@@ -84,18 +95,76 @@ main{
     opacity: 0.3;
     transition: 1s ease-in-out;
 }
+
+section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8vw 2rem;
+}
+section:nth-child(odd){
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+.section-img{
+    width: 60%;
+    box-shadow: -8px 8px 10px 0px black;
+}
+section img{
+    object-fit: cover;
+    width: 100%;
+}
+section p{
+    font-size: 3rem;
+    font-family: 'Patrick Hand', cursive;
+    text-align: center;
+}
+
+
+iframe{
+    width: 100%;
+}
 /****** MAIN (end) ******/
 
 
 
 
 
-/****** RESPONSIVE (start) ******/
-@media (max-width:1024px) {
-    main{
-        margin-top: 20vw;
-    }
+/****** FOOTER (start) ******/
+footer{
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    margin: 0;
+    padding: 0;
+    height: fit-content;
 }
+/****** FOOTER (end) ******/
+
+
+
+
+
+/****** BTN ONTOP (start) ******/
+#onTopButton {
+    font-size: 2rem;
+    padding: 0.5rem;
+    position: fixed;
+    bottom: 8vh;
+    left: 1rem;
+}
+#onTopButton:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    border-radius: 4px;
+}
+/****** BTN ONTOP (end) ******/
+
+
+
+
+
+/****** RESPONSIVE (start) ******/
 @media (max-width:759px) {
     .bestellung, .phone{
         text-align: center;
@@ -106,18 +175,29 @@ main{
         font-size: 1.2rem;
     }
     main{
-        margin-top: 15vw;
+        margin-top: 4vw;
+    }
+
+    section p{
+        font-size: 4vw;
+        font-family: 'Patrick Hand', cursive;
     }
 }
+
 @media (max-width:500px) {
-    nav a{
-        font-size: 16px !important;
+    .logo{
+        width: 3rem;
+        height: 2rem;
+    }
+    .nav-link{
+        font-size: 0.8rem;
     }
     .navbar{
         padding: 0;
     }
     .navbar-toggler{
-        padding: 0.1rem;
+        padding: 0.2rem;
+        font-size: 0.8rem;
     }
     .bestellung a{
         padding: 0.2rem;
@@ -133,5 +213,25 @@ main{
     .header-content{
         top: 60%;
     }
+
+    
+    main{
+        margin-top: 7vw;
+    }
+    
+    section:nth-child(odd){
+        flex-direction: column;
+    }
+    section{
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .section-img{
+        width: 80%;
+    }
+    section p{
+        margin: 2rem;
+    }
+    
 }
 /****** RESPONSIVE (end) ******/
