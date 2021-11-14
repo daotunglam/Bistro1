@@ -1,14 +1,21 @@
 /**
  * TOGGLE MENU
  */
-function toggleNavbar(){
-    let navbar = document.getElementById('navbar');
-    if(window.getComputedStyle(navbar).getPropertyValue('display') == 'none'){
-        navbar.style.display = 'block';
-    }
-    else{
-        navbar.style.display = 'none';
-    }
+// function toggleNavbar(){
+//     let navbar = document.getElementById('navbar');
+    
+//     if(window.getComputedStyle(navbar).getPropertyValue('display') == 'none'){
+//         navbar.style.display = 'block';
+//     }
+//     else{
+//         navbar.style.display = 'none';
+//     }
+// }
+if(window.innerWidth <= '759px'){
+    document.getElementById('navbar').classList.add('collapse')
+}
+else{
+    document.getElementById('navbar').className = 'navbar';
 }
 
 
