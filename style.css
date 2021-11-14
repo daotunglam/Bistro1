@@ -1,0 +1,143 @@
+/****** HEADER (start) ******/
+
+header{
+    position: sticky;
+    top: 0;
+    color: white;
+    padding: 8px;
+    z-index: 0;
+}
+
+header a{
+    text-decoration: none;
+    color: white;
+}
+
+header a:hover{
+    color: black;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+}
+
+.logo{
+    font-size: 40px;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+}
+
+.navbar a{
+    padding: 16px;
+}
+
+#menu-btn{
+    display: none;
+}
+
+#intro_video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+
+.bistro-name{
+    font-size: 8vw;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 100px;
+    white-space: nowrap;
+}
+
+header .function-btns{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 4px;
+}
+
+header .function-btns a{
+    padding: 8px 16px;
+    margin: 8px;
+    display: flex;
+    align-items: center;
+}
+/****** HEADER (end) ******/
+
+
+
+
+
+
+/****** MAIN (start) ******/
+main{
+    position: relative;
+    z-index: 1;
+    margin-top: 30vw;
+    background-color: white;
+    box-shadow: 0px -20px 10px 10px white;;
+}
+
+.hide_video {
+    /*js , hide video if scroll window up*/
+    opacity: 0.3;
+    transition: 1s ease-in-out;
+}
+/****** MAIN (end) ******/
+
+
+
+
+
+/****** RESPONSIVE (start) ******/
+@media (max-width:1024px) {
+    main{
+        margin-top: 20vw;
+    }
+}
+@media (max-width:759px) {
+    .bistro-name{
+        margin-top: 40px;
+    }
+    header .function-btns a{
+        padding: 4px 8px;
+    }
+    main{
+        margin-top: 15vw;
+    }
+}
+@media (max-width:500px) {
+    .logo{
+        font-size: 24px;
+    }
+    .navbar{
+        padding: 0;
+        display: none;
+    }
+    .navbar a{
+        font-size: 16px;
+        padding: 4px;
+    }
+    #menu-btn{
+        display: block;
+        font-size: 24px;
+        padding: 4px 8px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    #menu-btn:hover{
+        background-color: white;
+        color: black;
+    }
+}
+/****** RESPONSIVE (end) ******/
