@@ -25,39 +25,42 @@
 
 <body>
 
+    <!-- navbar -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <div class="logo">
+                <img src="media/logo.jpeg" href="#">
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+                <div class="offcanvas-header">
+                    <button type="button" class="btn-close text-reset bg-light"
+                        data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#menu.html">MENÜ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#gallery.html">GALERIE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about.html">ÜBER UNS</a>
+                        </li>
+                </div>
+            </div>
+        </div>
+    </nav>
+
 
     <!-- HEADER -->
 
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <div class="container-fluid">
-                <div class="logo">
-                    <img src="media/logo.jpeg" href="#">
-                </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
-                    <div class="offcanvas-header">
-                        <button type="button" class="btn-close text-reset bg-light"
-                            data-bs-dismiss="offcanvas"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#menu.html">MENÜ</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#gallery.html">GALERIE</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#about.html">ÜBER UNS</a>
-                            </li>
-                    </div>
-                </div>
-            </div>
-        </nav>
         <video id="intro_video" autoplay loop muted>
             <source src="media/wok1.mp4">
         </video>
@@ -110,7 +113,8 @@
                 aufpassen
             </p>
         </section>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56082.307478056035!2d11.464066165531888!3d48.03669803860711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479ddb8b4bbfcb41%3A0x11a2c73bbbaea55a!2sWolfratshauser%20Str.%20152%2C%2082049%20Pullach%20im%20Isartal!5e0!3m2!1sde!2sde!4v1636931573404!5m2!1sde!2sde" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <section>
+        </section>
     </main>
 
 
@@ -121,9 +125,16 @@
 
     <footer>
         <div class="open-hours">
+            <h4>ÖFFNUNGSZEITEN</h4>
             <p>Mo-Sa: 10:30 - 19:30</p>
             <p>Sonntag & Feiertag: geschlossen</p>
         </div>
+        <div class="company">
+            <h4>UNTERNEHMEN</h4>
+            <p>Kontakt</p>
+            <p>Impressum</p>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56082.307478056035!2d11.464066165531888!3d48.03669803860711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479ddb8b4bbfcb41%3A0x11a2c73bbbaea55a!2sWolfratshauser%20Str.%20152%2C%2082049%20Pullach%20im%20Isartal!5e0!3m2!1sde!2sde!4v1636931573404!5m2!1sde!2sde" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </footer>
 
 
