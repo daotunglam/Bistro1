@@ -152,6 +152,7 @@ footer{
     position: fixed;
     bottom: 8vh;
     left: 1rem;
+    display: none;
 }
 #onTopButton:hover {
     background-color: rgba(0, 0, 0, 0.2);
