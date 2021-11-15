@@ -154,6 +154,11 @@ footer{
     padding: 1rem;
     height: fit-content;
     position: relative; /*again position:sticky of header*/
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+footer > *{
+    padding: 1rem;
 }
 /****** FOOTER (end) ******/
 
@@ -163,10 +168,10 @@ footer{
 
 /****** BTN ONTOP (start) ******/
 #onTopButton {
-    font-size: 2rem;
-    padding: 0.5rem;
+    font-size: 1.5rem;
+    padding: 0 0.5rem;
     position: fixed;
-    bottom: 8vh;
+    bottom: 4vh;
     left: 1rem;
     display: none;
 }
@@ -196,7 +201,7 @@ footer{
     }
 
     section p{
-        font-size: 4vw;
+        font-size: 2rem;
         font-family: 'Patrick Hand', cursive;
     }
 }
@@ -208,9 +213,6 @@ footer{
     }
     .nav-link{
         font-size: 0.8rem;
-    }
-    .navbar{
-        padding: 0;
     }
     .navbar-toggler{
         padding: 0.2rem;
