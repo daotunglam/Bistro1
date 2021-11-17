@@ -34,6 +34,10 @@ body{
     background-color: white; /*this changing because of background-color of logo is white*/
 }
 
+.offcanvas-header{
+    justify-content: end;
+}
+
 .nav-link{
     /* color: white !important; */
     color: black !important; /*this changing because of background-color of logo is white*/
