@@ -15,137 +15,12 @@ body{
 
 
 
-/****** NAVBAR (start) ******/
-
-.navbar{
-    /* background-color: rgba(0, 0, 0, 0.3); */
-    /* background-color: rgba(151, 133, 74, 0.3); */
-    background-color: white; /*this changing because of background-color of logo is white*/
-    box-shadow: 0px 1px 8px 0px; /*this changing because of background-color of logo is white*/
-    position: sticky;
-    top:0;
-    left: 0;
-    right: 0;
-    z-index: 999;
-}
-
-.offcanvas{
-    /* background-color: rgba(0, 0, 0, 0.5); */
-    background-color: white; /*this changing because of background-color of logo is white*/
-}
-
-.offcanvas-header{
-    justify-content: end;
-}
-
-.nav-link{
-    /* color: white !important; */
-    color: black !important; /*this changing because of background-color of logo is white*/
-}
-
-.navbar-brand img{
-    width: 5rem;
-    height: 3.5rem;
-}
-
-@media (max-width:500px) {
-    .navbar-brand img{
-        width: 3rem;
-        height: 2.5rem;
-    }
-    .nav-link{
-        font-size: 0.8rem;
-    }
-    .navbar-toggler{
-        padding: 0.3rem;
-        font-size: 0.8rem;
-    }
-}
-
-@media (max-height:400px) {
-    .navbar-brand img{
-        width: 3rem;
-        height: 2.5rem;
-    }
-    .navbar {
-        padding:0;
-    }
-}
-/****** NAVBAR (end) ******/
-
-
-
-
-
-/****** HEADER (start) ******/
-
-header{
-    position: sticky;
-    /* top: 0; */
-    top: 2rem; /*this changing because of background-color of logo is white*/
-    color: white;
-    /* z-index: 0; */
-}
-
-#intro_video {
-    z-index: -1;
-    object-fit: cover;
-    width: 100%;
-}
-
-.hide_video {
-    /*js , hide video if scroll window up*/
-    opacity: 0.3;
-    transition: 1s ease-in-out;
-}
-
-.header-content{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.bistro-name{
-    font-size: 8vw;
-    font-weight: bold;
-    white-space: nowrap;
-    text-align: center;
-}
-.bestellung, .phone{
-    text-align: center;
-    margin: 1rem;
-    white-space: nowrap;
-}
-.bestellung a{
-    padding: 1rem 5rem;
-    font-size: 1.5rem;
-}
-
-@media (max-height:400px) {
-    .bestellung a{
-        padding: 0.5rem 1rem;
-        font-size: 1.5rem;
-    }
-    .header-content{
-        position: absolute;
-        top: 35%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-}
-/****** HEADER (end) ******/
-
-
-
-
 
 
 /****** MAIN (start) ******/
 main{
-    /* z-index: 2; */
-    position: relative; /*again position:sticky of header*/
-    margin-top: 3vw;
+    position:relative; /* again position:sticky of header */
+    margin-top: 5rem;
     background-color: white;
     box-shadow: 0px -10px 10px 10px white;
 }
@@ -154,20 +29,12 @@ section{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    padding: 8vw 2rem;
-}
-section:nth-child(odd){
-    flex-direction: row-reverse;
-    justify-content: space-between;
-}
-.section-img{
-    width: 60%;
-    box-shadow: -8px 8px 10px 0px black;
-}
-section img{
-    object-fit: cover;
-    width: 100%;
+    justify-content: space-evenly;
+    min-height: 90vh;
+    padding: 1rem;
+    background-attachment: fixed;
+    background-position:right;
+    background-size: cover;
 }
 section p{
     font-size: 3rem;
@@ -175,8 +42,48 @@ section p{
     text-align: center;
 }
 
-iframe{
-    width: 100%;
+#open-hours{
+    scroll-margin-top: 4rem; /* again scrolling to top:0 */
+    color: rgba(0, 0, 0, 0.8);
+}
+#open-hours a{
+    text-decoration: none;
+    color:inherit;
+}
+#section1{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(media/chao-rau-dau.jpg);
+}
+#section2{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(media/holon.jpg);
+}
+#section3{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(media/water-spinach.jpg);
+}
+#section4{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(media/tofu.jpg);
+}
+.section-descr{
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 4rem;
+}
+
+
+@media screen and (max-width:1024px) {
+    section{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:540px) {
+    #open-hours{
+        font-size: 1rem;
+    }
+    section p{
+        font-size: 2rem;
+    }
+    .section-descr{
+        font-size: 3rem;
+    }
 }
 /****** MAIN (end) ******/
 
@@ -184,103 +91,53 @@ iframe{
 
 
 
-/****** FOOTER (start) ******/
-footer{
-    /* background-color: rgba(0, 0, 0, 0.4); */
-    /* background-color: #4C361E; */
-    background-color: rgba(151, 133, 74, 1);
+/****** MENUS ******/
+
+#menu{
+    position: absolute;
+    top: 100px;
+    transform: translate(-50%, 0);
+    left: 50%;
+    width: 90vw;
+    min-height: 90vh;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 4px;
+    scroll-margin-top: 100px; /* again scrolling to top:0 */
     color: white;
-    margin: 0;
-    padding: 1rem;
-    height: fit-content;
-    position: relative; /*again position:sticky of header*/
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
-footer > *{
-    padding: 1rem;
+.hide-scrollbar{
+    position: relative;
+    padding: 2rem;
+    overflow-x: scroll;
+    -ms-overflow-style: none;  /* /* Hide scrollbar for IE and Edge */
+    scrollbar-width: none;  /* /* Hide scrollbar for Firefox */
 }
-/****** FOOTER (end) ******/
-
-
-
-
-
-/****** BTN ONTOP (start) ******/
-#onTopButton {
-    font-size: 1.5rem;
-    padding: 0 0.5rem;
-    position: fixed;
-    bottom: 4vh;
-    left: 1rem;
+.hide-scrollbar::-webkit-scrollbar {/* Hide scrollbar for Chrome, Safari and Opera */
     display: none;
 }
-#onTopButton:hover {
-    background-color: rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    border-radius: 4px;
+#menu img{
+    width: 100%;
+    transition: width 0.2s;
+    z-index: 0;
+    border: 2px solid transparent;
+    cursor: zoom-in;
 }
-/****** BTN ONTOP (end) ******/
-
-
-
-
-
-/****** RESPONSIVE (start) ******/
-@media (max-width:759px) {
-    .bestellung, .phone{
-        text-align: center;
-        margin: 0.5rem;
-    }
-    .bestellung a{
-        padding: 0.5rem 2rem;
-        font-size: 1.2rem;
-    }
-    main{
-        margin-top: 4vw;
-    }
-
-    section p{
-        font-size: 2rem;
-        font-family: 'Patrick Hand', cursive;
-    }
+#menu img:hover{
+    border: 2px solid white;
+}
+#menu .width-300{
+    width:300%;
+    cursor: zoom-out;
+}
+#menu .btn{
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    z-index: 1;
 }
 
-@media (max-width:500px) {
-    .bestellung a{
-        padding: 0.2rem;
-        font-size: 1rem;
-    }
-    .phone a{
-        padding: 0.2rem;
-        font-size: 0.5rem;
-    }
-    .bestellung, .phone{
-        margin: 0.1rem;
-    }
-    .header-content{
-        top: 60%;
-    }
-
-    
-    main{
-        margin-top: 7vw;
-    }
-    
-    section:nth-child(odd){
-        flex-direction: column;
-    }
-    section{
-        flex-direction: column;
-        padding: 1rem;
-    }
-    .section-img{
-        width: 80%;
-    }
-    section p{
-        margin: 2rem;
-    }
-    
-}
-
-/****** RESPONSIVE (end) ******/
+/****** MENUS ******/

@@ -1,0 +1,35 @@
+
+
+/****** NAVBAR (start) ******/
+
+.navbar{
+    /* background-color: rgba(0, 0, 0, 0.3); */
+    /* background-color: rgba(151, 133, 74, 0.3); */
+    background-color: white; /*this changing because of background-color of logo is white*/
+    box-shadow: 0px 1px 8px 0px; /*this changing because of background-color of logo is white*/
+    left: 0;
+    right: 0;
+    z-index: 998;
+}
+
+.offcanvas{
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    background-color: rgba(255, 255, 255, 0.7); /*this changing because of background-color of logo is white*/
+}
+
+.offcanvas-header{
+    justify-content: end;
+}
+
+.nav-link{
+    /* color: white !important; */
+    color: black !important; /*this changing because of background-color of logo is white*/
+    margin: 1rem;
+}
+
+.navbar-brand img{
+    width: 5rem;
+    height: 3.5rem;
+}
+
+/****** NAVBAR (end) ******/

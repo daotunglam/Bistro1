@@ -1,0 +1,53 @@
+
+/****** HEADER (start) ******/
+
+header{
+    color: white;
+    /* z-index: 0; */
+}
+
+#intro_video {
+    z-index: -1;
+    object-fit: cover;
+    width: 100%;
+    height: 90vh;
+}
+
+.hide_video {
+    /*js , hide video if scroll window up*/
+    opacity: 0.3;
+    transition: 1s ease-in-out;
+}
+
+.header-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    white-space: nowrap;
+    min-height: 50vh;
+    min-width: 40vw;;
+    text-align: center;
+}
+
+.bistro-name{
+    font-size: 6rem;
+    font-weight: bold;
+}
+
+.header-content .btn{
+    font-size: 2rem;
+}
+
+@media (max-width:759px) {
+    .bistro-name{
+        font-size: 4rem;
+    }
+    .header-content .btn{
+        font-size: 1.2rem;
+    }
+}
+/****** HEADER (end) ******/

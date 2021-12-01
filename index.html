@@ -19,103 +19,71 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="template/navbar/navbar.css">
+    <link rel="stylesheet" href="template/header/header.css">
+    <link rel="stylesheet" href="template/footer/footer.css">
+    <link rel="stylesheet" href="template/btnOntop/btnOntop.css">
     <!-- JS -->
     <script src="script.js"></script>
+    <script src="template/btnOntop/btnOntop.js"></script>
+    <script src="template/header/header.js"></script>
 </head>
 
 <body>
 
-    <!-- navbar -->
+    <!-- NAVBAR -->
 
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid">            
-            <a class="navbar-brand" href="#">
-                <img src="media/logo.JPG" href="#">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
-                <div class="offcanvas-header">
-                    <button type="button" class="btn-close text-reset bg-light"
-                        data-bs-dismiss="offcanvas"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#menu.html">MENÜ</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#gallery.html">GALERIE</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about.html">ÜBER UNS</a>
-                        </li>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <div w3-include-html="template/navbar/navbar.html"></div>
+
+
 
 
     <!-- HEADER -->
 
-    <header>
-        <video id="intro_video" autoplay loop muted>
-            <source src="media/wok1.mp4">
-        </video>
-        <div class="header-content">
-            <div class="text-center">ASIAN FOOD</div>
-            <div class="bistro-name">THU AN</div>
-            <div class="bestellung">
-                <a class="btn btn-outline-light" href="#">ONLINE BESTELLUNG</a>
-            </div>
-            <div class="phone">
-                <a class="btn btn-outline-dark btn-sm" href="tel:+4989123456789">
-                    <i class="fas fa-phone-square-alt"></i>
-                    089123456789
-                </a>
-            </div>
-        </div>
-    </header>
+    <div w3-include-html="template/header/header.html" style="position:sticky;top:4rem;"></div>
+
+
 
 
     <!-- MAIN -->
 
     <main>
-        <section>
-            <div class="section-img"><img src="media/vit.jpg"></div>
-            <p>jeden Tag frisch</p>
+        <section id="open-hours">
+            <p>Öffnungszeiten</p>
+            <div>
+                <p>
+                    <strong>Montag-Samstag:</strong>
+                </p>
+                <p>
+                    <strong>10:30 - 19:30</strong>
+                </p>
+                <p style="font-size: 1.5rem;"><i>Sonntag & Feiertag: geschlossen</i> </p>
+                <p class="text-center fs-4">
+                    <a href="https://goo.gl/maps/BRQGHNnVfww9YgDG6">
+                        <i class="fas fa-directions"></i>
+                        Wolfratshauser Str. 152 82049 Pullach (im AEZ)
+                    </a>
+                </p>
+            </div>
         </section>
-        <section>
-            <div class="section-img"><img src="media/giocha.jpg"></div>
-            <p>
+        <section id="section1">
+            <p class="section-descr">jeden Tag frisch</p>
+        </section>
+        <section id="section2">
+            <p class="section-descr">
                 traditionelle
                 Gerichten
             </p>
         </section>
-        <section>
-            <div class="section-img"><img src="media/water-spinach.jpg"></div>
-            <p>Spezialität</p>
+        <section id="section3">
+            <p class="section-descr">vietnamesische Spezialitäten</p>
         </section>
-        <section>
-            <div class="section-img"><img src="media/hot-pot.jpg"></div>
-            <p>
-                für die Freunden 
-                <br>
-                für die Familie
-            </p>
-        </section>
-        <section>
-            <div class="section-img"><img src="media/goicuon.jpg"></div>
-            <p>
+        <section id="section4">
+            <p class="section-descr">
                 auf die
                 Gesundheit
-                aufpassen
+                aufgepasst
             </p>
-        </section>
-        <section>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56082.307478056035!2d11.464066165531888!3d48.03669803860711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479ddb8b4bbfcb41%3A0x11a2c73bbbaea55a!2sWolfratshauser%20Str.%20152%2C%2082049%20Pullach%20im%20Isartal!5e0!3m2!1sde!2sde!4v1636931573404!5m2!1sde!2sde" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </section>
     </main>
 
@@ -123,30 +91,39 @@
 
 
 
+    <div id="menu">
+        <button class="btn bg-white btn-close" onclick="hide('menu')"></button>
+        <h1>MENU</h1>
+        <div class="hide-scrollbar">
+            <img id="menu1" src="media/menu1.jpeg" onclick="zoom('menu1')">
+        </div>
+        <div class="hide-scrollbar">
+            <img id="menu2" src="media/menu2.jpeg" onclick="zoom('menu2')">
+        </div>
+    </div>
+
+
+
+
+
+
     <!-- FOOTER -->
 
-    <footer>
-        <div class="open-hours">
-            <h4>ÖFFNUNGSZEITEN</h4>
-            <p>Mo-Sa: 10:30 - 19:30</p>
-            <p>Sonntag & Feiertag: geschlossen</p>
-        </div>
-        <div class="company">
-            <h4>UNTERNEHMEN</h4>
-            <p>Kontakt</p>
-            <p>Impressum</p>
-        </div>
-    </footer>
+    <div w3-include-html="template/footer/footer.html"></div>
 
 
 
-    
 
-    <!-- button Ontop -->
+    <!-- BTN ONTOP -->
+    <div w3-include-html="template/btnOntop/btnOntop.html"></div>
 
-    <div id="onTopButton" onclick="onTop()">
-        <i class="fas fa-chevron-up"></i>
-    </div>
+
+
+
+    <!-- INCLUDE TEMPLATE -->
+    <script>
+        includeHTML();
+    </script>
 
 
 </body>
